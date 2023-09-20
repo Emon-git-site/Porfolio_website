@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-#header{
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    height: 250vw;
+}
+
+#header {
     width: 100%;
     height: 100vh;
     position: relative;
 }
-#header::before{
+
+#header::before {
     content: "";
     position: absolute;
     background-image: url(../images/background.png);
@@ -24,56 +33,347 @@
     z-index: -1;
     opacity: 0.75;
 }
-nav{
+
+/* navbar start here */
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-nav>img{
+
+nav>img {
+    margin-top: .5em;
     height: 4rem;
 }
-nav>ul>li{
+
+nav>ul>li {
     list-style: none;
 }
 
-nav>ul>li a{
+nav>ul>li a {
     text-decoration: none;
-    color: white;
     font-weight: bold;
     position: relative;
+    color: white;
 }
-nav>ul>li a::after{
+
+nav>ul>li a::after {
     content: "";
     position: absolute;
     width: 0;
     height: 3px;
-    background-color:red;
+    background-color: red;
     left: 0;
     bottom: -2px;
-    visibility: hidden;
-    transition-property: all;
+    transition-property: width;
     transition-duration: .5s;
-    /* transition-delay: 1s; */
     transition-timing-function: ease;
-   
+
 }
-nav>ul>li a:hover::after{
-    visibility: visible;
+
+nav>ul>li a:hover::after {
     width: 100%;
-   
+
 }
-nav>ul{
+
+nav>ul {
     display: flex;
     justify-content: space-between;
     gap: 3em;
 }
-.header_text p{
+
+/* navbar end */
+
+.header_text p {
     margin-top: 20%;
     font-size: 1.7em;
-    color: rgb(230, 226, 221);
+    /* color: rgb(230, 226, 221); */
 }
-.header_text h1{
-    color: white;
+
+.header_text h1 {
     font-size: 4em;
     font-weight: 900;
+}
+
+.header_text {
+    margin-left: 7em;
+}
+
+.header_text span {
+    color: red;
+}
+
+/* about section start */
+.about {
+    display: flex;
+    gap: 1em;
+    padding: 4em;
+}
+
+.about_img img {
+    padding: 3em 3em 0 3em;
+    flex-basis: 35%;
+    width: 100%;
+    border-radius: 9%;
+}
+
+.about_content {
+    margin-top: 3em;
+    margin-right: 7em;
+    flex-basis: 60%;
+    text-align: justify;
+    width: 30%;
+}
+
+/* about tab section start */
+.about_tab_title {
+    margin-top: 1em;
+    display: flex;
+    gap: 2em;
+}
+
+.about_tab_link {
+    position: relative;
+}
+
+.about_tab_link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: .1em;
+    background-color: red;
+    left: 0;
+    bottom: -2px;
+}
+
+.about_tab_link.active_link::after {
+    width: 100%;
+}
+
+.about_tab_content ul li {
+    list-style: none;
+    margin: 30px 0;
+
+}
+
+.about_tab_content ul li span {
+    color: rgb(197, 70, 70);
+}
+
+.about_tab_content {
+    display: none;
+}
+
+.about_tab_content.active_tab {
+    display: block;
+}
+
+/* service section start here */
+.services {
+    margin: 0 7em;
+}
+
+.services h1 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.services_list {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+
+}
+
+.services_list div {
+    background-color: rgb(56, 55, 55);
+    padding: 25px;
+    border-radius: 10px;
+    transition: background_color .4s, transform .4s;
+}
+
+.services_list h2 {
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.services_list>div p {
+    text-align: justify;
+}
+
+.services_list i {
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+.services_list a {
+    text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding-top: 20px;
+    display: block;
+}
+
+.services_list div:hover {
+    background-color: red;
+    transform: translateY(-10px);
+}
+
+/* portfolio section start */
+.porfolio {
+    margin: 0 7em;
+}
+
+.porfolio .porfolio_heading {
+    margin: 50px 0px;
+    /* padding-left: -20px; */
+    font-size: 60px;
+    font-weight: bolder;
+    /* padding-left: 55px; */
+
+}
+
+.work_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    overflow: hidden;
+}
+
+.work {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    transition: transfrom .4s visibility .4s;
+}
+
+.work img {
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+}
+
+.work .layer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    padding: 5px;
+}
+
+.work .layer a {
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work:hover .layer {
+    visibility: visible;
+    height: 100%;
+}
+
+.work:hover img {
+    transform: scale(1.2);
+}
+
+.work_btn {
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+    color: violet;
+    border: 1px solid red;
+    padding: 5px 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.work_btn:hover {
+    background-color: red;
+}
+
+/* porfolio section end */
+
+/* contact me section end */
+
+.contact{
+    padding: 10px 0;
+    margin:3em 6.6em;
+    display: flex;
+}
+.contact_address{
+    flex-basis: 40%;
+   
+}
+.contact_address h1,
+.contact_address p,
+.contact_address div{
+    padding: 10px 0;
+}
+.contact_title{
+  font-size: 4em;
+}
+.contact_link i{
+    color: white;
+    padding: 0 5px;
+    font-size: 25px;
+}
+.contact_link i:hover{
+    color: blue;
+}
+.cv_download-btn{
+    padding: 12px 35px;
+    background-color: rgb(223, 55, 55);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.cv_download-btn:hover{
+    background-color: gray;
+}
+
+.contact_form{
+    flex-basis: 55%;
+}
+
+form>input, form>textarea{
+    display: block;
+    width: 90%;
+    background-color: #c4d1c5;
+    color: rgb(170, 207, 84);
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px
+}
+.form_submit-btn{
+    padding: 12px 35px;
+    background-color: rgb(223, 55, 55);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+.coppyright{
+    text-align: center;
+    width: 100%;
+}
+.form_submit-btn:hover{
+    background-color: #9c8a8a;
 }
