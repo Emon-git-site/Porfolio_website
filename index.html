@@ -56,22 +56,23 @@
       </div>
       <!-- About Tab section start -->
       <div class="about_tab_title">
-        <p class="about_tab_link">
+        <p class="about_tab_link active_link" onclick="opentab('skill')" >
           skill
         </p>
-        <p class="about_tab_link">
+        <p class="about_tab_link" onclick="opentab('experience')">
           Experience
         </p>
-        <p class="about_tab_link">Education</p>
+        <p class="about_tab_link" onclick="opentab('education')">Education</p>
       </div>
-      <div class="about_tab_content">
+     <div class="about_tab_content_parent">
+      <div class="about_tab_content" id="skill">
         <ul>
           <li><span>app</span><br />Designing Web/App interface</li>
           <li><span>Web Development</span><br />Web app Development</li>
           <li><span>App Development</span><br />Building Android/ios apps</li>
         </ul>
       </div>
-      <div class="about_tab_content">
+      <div class="about_tab_content" id="experience">
         <ul>
           <li><span>Ul/UX</span><br />Experience Web/App interface</li>
           <li><span>Network Security</span><br />Web app Development</li>
@@ -80,13 +81,14 @@
           </li>
         </ul>
       </div>
-      <div class="about_tab_content">
+      <div class="about_tab_content" id="education">
         <ul>
           <li><span>SSc</span><br />passed in 2013 from AB school/li></li>
           <li><span>HSC</span><br />passed in 2015 from AB College</li>
           <li><span>BSC</span><br />Passed in 2019 from University</li>
         </ul>
       </div>
+     </div>
     </div>
   </div>
   <!-- about section end -->
@@ -127,7 +129,7 @@
     </div>
   </div>
   <!-- services section end -->
-  <!-- portfolio section start -->
+  <!-- portfolio(work) section start -->
   <div class="porfolio">
     <h1 class="porfolio_heading">My Work</h1>
     <div class="work_list">
@@ -137,8 +139,7 @@
           <h3>App Designer</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Sapiente, aliquam ipsa. Ipsa, optio amet at repellendus eaque,
-            deserunt facere dolore explicabo nam
+            Sapiente, aliquam ipsa. Ipsa,
           </p>
           <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
@@ -149,8 +150,7 @@
           <h3>App Designer</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Sapiente, aliquam ipsa. Ipsa, optio amet at repellendus eaque,
-            deserunt facere dolore explicabo nam
+            Sapiente, aliquam ipsa. Ipsa,
           </p>
           <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
@@ -161,8 +161,7 @@
           <h3>App Designer</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Sapiente, aliquam ipsa. Ipsa, optio amet at repellendus eaque,
-            deserunt facere dolore explicabo nam
+            Sapiente, aliquam ipsa. Ipsa,
           </p>
           <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
@@ -170,7 +169,7 @@
     </div>
     <a href="#" class="work_btn">Learn More</a>
   </div>
-  <!-- porfolio section end -->
+  <!-- porfolio(work) section end -->
   <!-- contact me secttion start -->
   <div class="contact">
     <div class="contact_address">
