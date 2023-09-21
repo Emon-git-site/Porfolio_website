@@ -1,37 +1,141 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     color: white;
+    background-color: black;
 }
-.header{
+
+.header {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
     left: 0px;
-    /* bottom: 0px; */
     top: 0px;
+    z-index: 1000;
 }
-.navbar_logo{
-    height: 30px;
+
+.header .navbar_logo img {
+    max-height: 60px;
 }
-.navbar_menu ul{
+
+
+.navbar_menu ul {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
-.navbar_menu ul li{
+
+.navbar_menu ul li {
     list-style: none;
 }
-.navbar_menu ul li a{
+
+.navbar_menu ul li a {
     text-decoration: none;
 }
 
-
-.hero_image img{
+.hero_image {
     position: relative;
     width: 100%;
+}
 
+.hero_image img {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero_content {
+    position: absolute;
+    bottom: 30%;
+    left: 18%;
+    z-index: 10000;
+}
+
+.hero_content .hereo-sub-heading {
+    font-size: 30px;
+}
+
+.hero_content h1.hero-heading {
+    font-size: 55px;
+}
+
+.hero_content h1.hero-heading span {
+    color: brown;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    margin: 150px auto;
+    padding: 0px 150px;
+
+}
+
+.about-section .about_img {
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+
+.about-section .about_img img {
+    max-height: 450px;
+    border-radius: 10px;
+    margin-right: 20px;
+
+
+}
+
+.about_content {
+    padding: 20px;
+}
+
+.about_tab_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: start;
+
+}
+
+.about_tab_link {
+    margin-right: 40px;
+}
+
+.services {
+    margin: 150px auto;
+    padding: 0px 150px;
+}
+
+.services .service-heading {
+    font-size: 55px;
+    padding-bottom: 20px;
+}
+
+.services_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.service-item {
+    padding: 15px;
+    background-color: rgb(158, 137, 110);
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-item i {
+    background-color: rgb(158, 137, 110);
+}
+
+.service-item h2 {
+    background-color: rgb(158, 137, 110);
 }
