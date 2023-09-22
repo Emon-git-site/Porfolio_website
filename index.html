@@ -16,19 +16,25 @@
       <img src="assets/images/Name_logo.png" alt />
     </div>
     <div class="navbar_menu">
-      <ul>
+      <ul class="menu_close navbar_list">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Porfolio</a></li>
         <li><a href="#">Contact</a></li>
+        <i class=" menu_cross menu_close fa-solid fa-circle-xmark fa-2xl" onclick="closeMenu()"></i>
       </ul>
+      <i class="menu_bar menu_open fa-solid fa-bars fa-xl" onclick="openMenu()"></i>
     </div>
   </div>
   <!-- header end -->
 
   <!-- hero section start -->
   <div class="hero_image">
+    <source
+    srcset="/assets/images/phone-background.png"
+    media="(max-width: 550px)"
+    >
     <img src="assets/images/background.png" alt>
   </div>
   <div class="hero_content">
@@ -65,7 +71,7 @@
         <p class="about_tab_link" onclick="opentab('education')">Education</p>
       </div>
       <div class="about_tab_content_parent ">
-        <div class="about_tab_content" id="skill">
+        <div class="about_tab_content active_tab" id="skill">
           <ul>
             <li><span>app</span><br />Designing Web/App interface</li>
             <li><span>Web Development</span><br />Web app Development</li>
@@ -109,7 +115,7 @@
       </div>
       <div class="service-item">
         <i class="fa-solid fa-crop-simple"></i>
-        <h2>UI/UX Design</h2>
+        <h2>UX Design</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Reprehenderit aperiam architecto dicta sed minus saepe amet cumque

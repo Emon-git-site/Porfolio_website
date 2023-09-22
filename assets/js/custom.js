@@ -1,3 +1,5 @@
+
+// about tab section function
 let tabLinks =  document.getElementsByClassName("about_tab_link");
 let tabContents = document.getElementsByClassName("about_tab_content");
 
@@ -15,3 +17,26 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("active_tab");
    console.log(document.getElementById(tabname))
 }
+
+// menu bar open and close system
+ menuClose = document.getElementsByClassName("menu_close");
+ menuOpen = document.getElementsByClassName("menu_bar");
+
+console.log(menuClose);
+console.log(menuOpen);
+
+function closeMenu(){
+   for( close of menuClose){
+    close.style.visibility = "hidden";
+   }
+} 
+   function openMenu(){
+    console.log(menuOpen);
+   
+     for( close of menuClose){
+        close.style.visibility = "visible";
+       }
+   
+       menuOpen.style.visibility = "hidden";
+   }
+
