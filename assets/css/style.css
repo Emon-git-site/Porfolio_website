@@ -26,10 +26,10 @@ body {
 .header .navbar_logo img {
     max-height: 60px;
 }
-.navbar_menu i {
+.menu_open {
     visibility: hidden;
 }
-ul>i{
+.menu_cross{
     visibility: hidden;
 }
 
@@ -634,7 +634,7 @@ ul>i{
         left: 60%;
         top: 1%;
     }
-    .navbar_menu .menu_bar {
+    .menu_open {
         visibility:visible;
         position: absolute;
         top: 35px;
