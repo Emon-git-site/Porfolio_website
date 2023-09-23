@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- custom style sheet link -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Personal Porfolio Website</title>
-  </head>
 
-  <body>
-    <!-- header start -->
-    <div id="header">
-      <!-- navbar start here -->
-      <nav>
-        <img src="assets/images/Name_logo.png" alt="" />
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Porfolio</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header_text">
-        <p>Frontend Developer</p>
-        <h1>
-          Hi, I'm Md <span>Alauddin</span> <br />
-          from Bangladesh
-        </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Personal Porfolio Website</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <div class="header">
+    <div class="navbar_logo">
+      <img src="assets/images/Name_logo.png" alt />
+    </div>
+    <div class="navbar_menu">
+      <ul class="menu_close navbar_list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Porfolio</a></li>
+        <li><a href="#">Contact</a></li>
+        <i class=" menu_cross menu_close fa-solid fa-circle-xmark fa-2xl" onclick="closeMenu()"></i>
+      </ul>
+      <div class="menu_bar">
+        <i class="menu_open fa-solid fa-bars fa-xl" onclick="openMenu()"></i>
       </div>
     </div>
-    <!-- header end -->
-    <!-- about start-->
-    <div class="about">
-      <div class="about_img">
-        <img src="assets/images/user.png" alt="" />
+  </div>
+  <!-- header end -->
+
+  <!-- hero section start -->
+  <div class="hero_image">
+    <source
+    srcset="/assets/images/phone-background.png"
+    media="(max-width: 550px)"
+    >
+    <img src="assets/images/background.png" alt>
+  </div>
+  <div class="hero_content">
+    <div class="hereo-sub-heading">Frontend Developer</div>
+    <h1 class="hero-heading">
+      Hi, I'm Md <span>Alauddin</span> <br />
+      from Bangladesh
+    </h1>
+  </div>
+  <!-- hero section end -->
+  <!-- about start -->
+  <div class="about-section">
+    <div class="about_img">
+      <img src="assets/images/user.png" alt />
+    </div>
+    <div class="about_content">
+      <h1 class="about_title">About Me</h1>
+      <div class="about_details">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Exercitationem nobis minima quis temporibus ducimus aliquid, omnis
+        corporis, tenetur fuga odit perferendis reiciendis animi, sint veniam
+        amet recusandae deleniti fugit vel. Exercitationem nobis minima quis
+        temporibus ducimus aliquid, omnis corporis, tenetur fuga odit
+        perferendis reiciendis animi.
       </div>
-      <div class="about_content">
-        <h1>About Me</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Exercitationem nobis minima quis temporibus ducimus aliquid, omnis
-          corporis, tenetur fuga odit perferendis reiciendis animi, sint veniam
-          amet recusandae deleniti fugit vel. Exercitationem nobis minima quis
-          temporibus ducimus aliquid, omnis corporis, tenetur fuga odit
-          perferendis reiciendis animi.
+      <!-- About Tab section start -->
+      <div class="about_tab_title">
+        <p class="about_tab_link active_link" onclick="opentab('skill')">
+          skill
         </p>
-        <!-- About Tab section start -->
-        <div class="about_tab_title">
-          <p class="about_tab_link active_link" onclick="opentab('skill')">
-            skill
-          </p>
-          <p class="about_tab_link" onclick="opentab('expreience')">
-            Experience
-          </p>
-          <p class="about_tab_link" onclick="opentab('education')">Education</p>
-        </div>
+        <p class="about_tab_link" onclick="opentab('experience')">
+          Experience
+        </p>
+        <p class="about_tab_link" onclick="opentab('education')">Education</p>
+      </div>
+      <div class="about_tab_content_parent ">
         <div class="about_tab_content active_tab" id="skill">
           <ul>
             <li><span>app</span><br />Designing Web/App interface</li>
@@ -70,7 +80,7 @@
             <li><span>App Development</span><br />Building Android/ios apps</li>
           </ul>
         </div>
-        <div class="about_tab_content" id="expreience">
+        <div class="about_tab_content" id="experience">
           <ul>
             <li><span>Ul/UX</span><br />Experience Web/App interface</li>
             <li><span>Network Security</span><br />Web app Development</li>
@@ -88,121 +98,127 @@
         </div>
       </div>
     </div>
-    <!-- about section end -->
-    <!-- services start  -->
-    <div class="services">
-      <h1 class="sub_title">My Services</h1>
-      <div class="services_list">
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Web Design</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Reprehenderit aperiam architecto dicta sed minus saepe amet cumque
-            dolorem vitae esse! Qui, ab.
-          </p>
-          <a href="#">learn More</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-crop-simple"></i>
-          <h2>UI/UX Design</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Reprehenderit aperiam architecto dicta sed minus saepe amet cumque
-            dolorem vitae esse! Qui, ab.
-          </p>
-          <a href="#">learn More</a>
-        </div>
-        <div>
-          <i class="fa-brands fa-app-store-ios"></i>
-          <h2>App Design</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Reprehenderit aperiam architecto dicta sed minus saepe amet cumque
-            dolorem vitae esse! Qui, ab.
-          </p>
-          <a href="#">See More</a>
-        </div>
+  </div>
+  <!-- about section end -->
+  <!-- services start  -->
+  <div class="services">
+    <h1 class="service-heading">My Services</h1>
+    <div class="services_list">
+      <div class="service-item ">
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Reprehenderit aperiam architecto dicta sed minus saepe amet cumque
+          dolorem vitae esse! Qui, ab.
+
+        </p>
+
+      </div>
+      <div class="service-item">
+        <i class="fa-solid fa-crop-simple"></i>
+        <h2>UX Design</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Reprehenderit aperiam architecto dicta sed minus saepe amet cumque
+          dolorem vitae esse! Qui, ab.
+        </p>
+
+      </div>
+      <div class="service-item">
+        <i class="fa-brands fa-app-store-ios"></i>
+        <h2>App Design</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Reprehenderit aperiam architecto dicta sed minus saepe amet cumque
+          dolorem vitae esse! Qui, ab.
+        </p>
+
       </div>
     </div>
-    <!-- services section end -->
-    <!-- portfolio section start -->
-    <div class="porfolio">
-      <h1 class="porfolio_heading">My Work</h1>
-      <div class="work_list">
-        <div class="work">
+  </div>
+  <!-- services section end -->
+  <!-- portfolio(work) section start -->
+  <div class="porfolio">
+    <h1 class="porfolio_heading">My Work</h1>
+    <div class="work_list">
+      <div class="work">
+        <div class="work-image">
           <img src="assets/images/work-1.png" alt="" />
-          <div class="layer">
-            <h3>App Designer</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Sapiente, aliquam ipsa. Ipsa, optio amet at repellendus eaque,
-              deserunt facere dolore explicabo nam
-            </p>
-            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-          </div>
         </div>
-        <div class="work">
-          <img src="assets/images/work-2.png" alt="" />
-          <div class="layer">
-            <h3>App Designer</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Sapiente, aliquam ipsa. Ipsa, optio amet at repellendus eaque,
-              deserunt facere dolore explicabo nam
-            </p>
-            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-          </div>
-        </div>
-        <div class="work">
-          <img src="assets/images/work-3.png" alt="" />
-          <div class="layer">
-            <h3>App Designer</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Sapiente, aliquam ipsa. Ipsa, optio amet at repellendus eaque,
-              deserunt facere dolore explicabo nam
-            </p>
-            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-          </div>
+        <div class="layer">
+          <h3>App Designer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Sapiente, aliquam
+          </p>
+          <a href="#"><i class="fa-solid fa-code fa-9xl"></i></a>
         </div>
       </div>
-      <a href="#" class="work_btn">Learn More</a>
-    </div>
-    <!-- porfolio section end -->
-    <!-- contact me secttion start -->
-    <div class="contact">
-      <div class="contact_address">
-        <h1 class="contact_title">Contact Me</h1>
-        <p><i class="fa-brands fa-telegram"></i> Poefolio_address@gmail.com</p>
-        <p><i class="fa-solid fa-phone"></i> 01884738473</p>
-        <div class="contact_link">
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-twitch"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <div class="work">
+        <div class="work-image">
+          <img src="assets/images/work-1.png" alt="" />
         </div>
-        <button class="cv_download-btn">Download CV</button>
+        <div class="layer">
+          <h3>App Designer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Sapiente, aliquam
+          </p>
+          <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
       </div>
-      <div class="contact_form">
-        <form action="">
-          <input type="text" name="name" placeholder="Your Name" />
-          <input type="email" name="email" placeholder="Your Email" />
-          <textarea
-            name="message"
-            id=""
-            cols="30"
-            rows="7"
-            placeholder="Your Message"
-          ></textarea>
-          <button class="form_submit-btn">Submit</button>
-        </form>
+      <div class="work">
+        <div class="work-image">
+          <img src="assets/images/work-1.png" alt="" />
+        </div>
+        <div class="layer">
+          <h3>App Designer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Sapiente, aliquam
+          </p>
+          <a href="#">
+            <i class="fa-solid fa-up-right-from-square"></i>
+          </a>
+        </div>
       </div>
     </div>
-    <!-- contact me section end -->
+    <div class="work_btn">
+      Learn More
+    </div>
+  </div>
+  <!-- porfolio(work) section end -->
+  <!-- contact me secttion start -->
+  <div class="contact">
+    <div class="contact_address">
+      <h1 class="contact_title">Contact Me</h1>
+      <p><i class="fa-brands fa-telegram"></i> Poefolio_address@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> 01884738473</p>
+      <div class="contact_link">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitch"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <button class="cv_download-btn">Download CV</button>
+    </div>
+    <div class="contact_form">
+      <form action>
+        <input type="text" name="name" placeholder="Your Name" />
+        <input type="email" name="email" placeholder="Your Email" />
+        <textarea name="message" id cols="30" rows="7" placeholder="Your Message"></textarea>
+
+      </form>
+      <button class="form_submit-btn">Submit</button>
+    </div>
+  </div>
+  <!-- contact me section end -->
   <div class="coppyright">
     <p>copyright <i class="fa-solid fa-copyright"></i> Kevin. Made with <i class="fas fa-heart"></i> by Easy Tutorials </p>
   </div>
-    <script src="assets/js/custom.js"></script>
-  </body>
+
+  <script src="assets/js/custom.js"></script>
+</body>
+
 </html>
